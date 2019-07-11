@@ -16,7 +16,7 @@
 
 ## Description
 
-... to be defined ...
+Au3VidOverlay allows to play Youtube videos as transparent fullscreen overlay above each window. So it's possible to do your work and to view your chosen video without switching windows.
 
 ## Features
 
@@ -32,19 +32,23 @@
 
 ## Keyboard Shortcuts
 
-... to be defined ...
+| Action              | Shortcut      |
+| :------------------ | :------------ |
+| Increase visibility | `Alt+Numpad+` |
+| Decrease visibility | `Alt+Numpad-` |
+| Close program       | `Alt+Numpad5` |
 
 ## Tested
 
 > SUT (system(s) under test)
 
-| Property       | Win 10          | Win 7       |
-| :------------- | :-------------- | :---------- |
-| @AutoItExe     | autoit3_x64.exe | autoit3.exe |
-| @AutoItVersion | 3.3.14.2        | 3.3.14.2    |
-| @CPUArch       | X64             | X64         |
-| @OSArch        | X64             | X64         |
-| @OSVersion     | WIN_10          | WIN_7       |
+| Property       | Win 10          | Win 7       | Win 10 Tablet |
+| :------------- | :-------------- | :---------- | :------------ |
+| @AutoItExe     | autoit3_x64.exe | autoit3.exe | autoit3.exe   |
+| @AutoItVersion | 3.3.14.2        | 3.3.14.2    | 3.3.14.5      |
+| @CPUArch       | X64             | X64         | X64           |
+| @OSArch        | X64             | X64         | X86           |
+| @OSVersion     | WIN_10          | WIN_7       | Win_10        |
 
 ## Style Guide
 
