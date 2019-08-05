@@ -6,9 +6,10 @@
 </p>
 
 ![license](https://img.shields.io/badge/license-MIT-green.svg?logo=github)
+![contributors](https://img.shields.io/github/contributors/Sven-Seyfert/AutoIt-Au3VidOverlay.svg?logo=github)
 ![repo size](https://img.shields.io/github/repo-size/Sven-Seyfert/AutoIt-Au3VidOverlay.svg?logo=github)
 ![last commit](https://img.shields.io/github/last-commit/Sven-Seyfert/AutoIt-Au3VidOverlay.svg?logo=github)
-![contributors](https://img.shields.io/github/contributors/Sven-Seyfert/AutoIt-Au3VidOverlay.svg?logo=github)
+![release](https://img.shields.io/github/release/Sven-Seyfert/AutoIt-Au3VidOverlay)
 ![os](https://img.shields.io/badge/os-windows-blueviolet.svg?logo=windows)
 ![autoit](https://img.shields.io/badge/autoit-rockz-9cf.svg?logo=visual-studio-code)
 
