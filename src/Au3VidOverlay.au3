@@ -1,8 +1,8 @@
 ; compiler information for AutoIt
 #AutoIt3Wrapper_AU3Check_Stop_OnWarning=y
 #AutoIt3Wrapper_Icon=..\media\favicon.ico
-#AutoIt3Wrapper_Res_Description=Au3VidOverlay (2019-06-07)
-#AutoIt3Wrapper_Res_Fileversion=0.3
+#AutoIt3Wrapper_Res_Description=Au3VidOverlay (2020-02-09)
+#AutoIt3Wrapper_Res_Fileversion=0.4
 #AutoIt3Wrapper_UseUpx=n
 #AutoIt3Wrapper_UseX64=y
 
@@ -34,12 +34,12 @@ If $aInst[0][0] > 1 Then Exit
 
 
 ; processing -------------------------------------------------------------------
-_writeFile( $sFileHtml, $sHtml )
+_writeFile( $aFile[$eHtml], $sHtml )
 
-Global $iReturnValue = _upload( $sFileHtml )
+Global $iReturnValue = _upload( $aFile[$eHtml] )
 If $iReturnValue == -1 Then _disposeAndExit()
 
-FileDelete( $sFileHtml )
+FileDelete( $aFile[$eHtml] )
 
 Global $sDuration = _getVidDuration( $sVidId )
 Global $iDuration = _getVidDurationInSeconds( $sDuration )

@@ -80,6 +80,6 @@ EndFunc
 
 Func _disposeAndExit()
     GUIDelete()
-    FileDelete( $sFileHtml )
+    FileDelete( $aFile[$eHtml] )
     Exit
 EndFunc

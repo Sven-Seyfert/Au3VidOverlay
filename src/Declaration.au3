@@ -1,3 +1,27 @@
+Global $iArgumentCount = $CmdLine[0]
+If $iArgumentCount <> 1 Then
+    MsgBox( 16, 'Error', _
+        'Expected is one argument which is the RC4 crypt key.' & _
+        @CRLF & _
+        'Please call the program again with that expected value.', 60 )
+    Exit -1
+EndIf
+
+Global $aFile[$iEnumVariables]
+       $aFile[$eHtml]          = _getUniqueString() & '.html'
+       $aFile[$eConfig]        = '..\config\config.ini'
+
+Global $sVidId                 = IniRead( $aFile[$eConfig], 'Youtube', 'VideoId', '' )
+Global $sUrl                   = IniRead( $aFile[$eConfig], 'Video', 'VideoUrl', '' ) & $aFile[$eHtml]
+
+Global $aFtp[$iEnumVariables]
+       $aFtp[$eFileLocal]      = $aFile[$eHtml]
+       $aFtp[$eFileRemote]     = '/www/' & $aFile[$eHtml]
+       $aFtp[$eRc4CryptKey]    = $CmdLine[1]
+       $aFtp[$eServer]         = IniRead( $aFile[$eConfig], 'FtpServer', 'Server', '' )
+       $aFtp[$eUser]           = IniRead( $aFile[$eConfig], 'FtpServer', 'User', '' )
+       $aFtp[$ePass]           = IniRead( $aFile[$eConfig], 'FtpServer', 'Pass', '' )
+
 Global $aGui[$iEnumVariables]
        $aGui[$eHandle]         = ''
        $aGui[$eWidth]          = @DesktopWidth
@@ -11,22 +35,8 @@ Global $aTransparency[$iEnumVariables]
        $aTransparency[$eStep]  = 15
        $aTransparency[$eValue] = 45
 
-Global $sFileHtml              = _getUniqueString() & '.html'
-Global $sUrl                   = 'http://vidoverlay.bplaced.net/' & $sFileHtml
-Global $sVidId                 = 'VI4ssGtfdxw'
-
-Global $aFtp[$iEnumVariables]
-       $aFtp[$eRc4CryptKey]    = '<hereShouldBeYourCryptKey>'       ; adjust this
-       $aFtp[$eFileLocal]      = $sFileHtml
-       $aFtp[$eFileRemote]     = '/www/' & $sFileHtml
-       $aFtp[$eServer]         = '0xC1C57D234AB7456FF0815'          ; adjust this (use your crypt key above to generate that RC4 key)
-       $aFtp[$eUser]           = '0x2A55BAB72269DC22134'            ; adjust this (use your crypt key above to generate that RC4 key)
-       $aFtp[$ePass]           = '0x0F99BCC1C57DAB72269DC221349'    ; adjust this (use your crypt key above to generate that RC4 key)
-
-If $CmdLine[0] == 1 Then $sVidId = $CmdLine[1]
-
 Global $sHtml = _
-'<!DOCTYPE html>' & @CRLF & _
+    '<!DOCTYPE html>' & @CRLF & _
     '<html lang="en">' & @CRLF & _
     '<head>' & @CRLF & _
     '    <meta charset="UTF-8">' & @CRLF & _

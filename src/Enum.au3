@@ -1,13 +1,15 @@
-Global $iEnumVariables = 15
+Global $iEnumVariables = 17
 Global Enum _
-    $eRc4CryptKey, _
+    $eConfig, _
     $eFileLocal, _
     $eFileRemote, _
     $eHandle, _
     $eHeight, _
+    $eHtml, _
     $eMax, _
     $eMin, _
     $ePass, _
+    $eRc4CryptKey, _
     $eServer, _
     $eStep, _
     $eUser, _
