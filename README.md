@@ -13,7 +13,7 @@
 ![os](https://img.shields.io/badge/os-windows-blueviolet.svg?logo=windows)
 ![autoit](https://img.shields.io/badge/autoit-rockz-9cf.svg?logo=visual-studio-code)
 
-[Description](#description) | [Features](#features) | [Getting started](#getting-started) | [Configuration](#configuration) | [Keyboard Shortcuts](#keyboard-shortcuts) | [Tested](#tested) | [Contributing](#contributing) | [Style Guide](#style-guide)
+[Description](#description) | [Features](#features) | [Getting started](#getting-started) | [Configuration](#configuration) | [Keyboard Shortcuts](#keyboard-shortcuts) | [Tested](#tested) | [Contributing](#contributing)
 
 ## Description
 
@@ -54,10 +54,6 @@ Au3VidOverlay allows to play Youtube videos as transparent fullscreen overlay ab
 ## Contributing
 
 Just look at [CONTRIBUTING](https://github.com/Sven-Seyfert/Au3VidOverlay/blob/master/docs/CONTRIBUTING.md), thank you!
-
-## Style Guide
-
-For my AutoIt projects and programs I use a self defined StyleGuide which represents how I write nice readable code that should be understandable by others quickly. Therefore please have a look on my [Au3StyleGuide](https://github.com/Sven-Seyfert/Au3StyleGuide/blob/master/README.md) repository if you're interested.
 
 ##
 
