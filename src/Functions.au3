@@ -3,6 +3,7 @@ Func _getUniqueString()
     $sMachineGuid = StringReplace( $sMachineGuid, '-', '' )
     $sMachineGuid = StringTrimLeft( $sMachineGuid, 5 )
     $sMachineGuid = StringTrimRight( $sMachineGuid, 7 )
+
     Return StringLower( $sMachineGuid )
 EndFunc
 
@@ -18,6 +19,7 @@ EndFunc
 
 Func _getVidDuration( $sId )
     Local $sUrlContent = BinaryToString( InetRead( 'https://www.youtube.com/watch?v=' & $sId, 1 ) )
+
     Return StringReplace( StringRegExp( $sUrlContent, 'meta itemprop="duration" content="(.+?)"', 1 )[0], 'PT', '' )
 EndFunc
 
@@ -81,5 +83,6 @@ EndFunc
 Func _disposeAndExit()
     GUIDelete()
     FileDelete( $aFile[$eHtml] )
+
     Exit
 EndFunc
