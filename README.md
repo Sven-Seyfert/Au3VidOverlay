@@ -17,7 +17,7 @@
 
 ## Description
 
-Au3VidOverlay allows to play Youtube videos as transparent fullscreen overlay above each window. So it's possible to do your work and to view your chosen video without switching windows.
+Au3VidOverlay allows to play Youtube videos as semi transparent fullscreen overlay above each window. So it's possible to do your work and to view your chosen video without switching windows.
 
 ## Features
 
