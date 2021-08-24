@@ -1,4 +1,3 @@
-Global $iEnumVariables = 17
 Global Enum _
     $eConfig, _
     $eFileLocal, _
@@ -16,4 +15,5 @@ Global Enum _
     $eValue, _
     $eWidth, _
     $eXPosition, _
-    $eYPosition
+    $eYPosition, _
+    $iMaxEnumIndex

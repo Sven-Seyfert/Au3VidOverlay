@@ -7,14 +7,14 @@ If $iArgumentCount <> 1 Then
     Exit -1
 EndIf
 
-Global $aFile[$iEnumVariables]
+Global $aFile[$iMaxEnumIndex]
        $aFile[$eHtml]          = _getUniqueString() & '.html'
        $aFile[$eConfig]        = '..\config\config.ini'
 
 Global $sVidId                 = IniRead( $aFile[$eConfig], 'Youtube', 'VideoId', '' )
 Global $sUrl                   = IniRead( $aFile[$eConfig], 'Video', 'VideoUrl', '' ) & $aFile[$eHtml]
 
-Global $aFtp[$iEnumVariables]
+Global $aFtp[$iMaxEnumIndex]
        $aFtp[$eFileLocal]      = $aFile[$eHtml]
        $aFtp[$eFileRemote]     = '/www/' & $aFile[$eHtml]
        $aFtp[$eRc4CryptKey]    = $CmdLine[1]
@@ -22,14 +22,14 @@ Global $aFtp[$iEnumVariables]
        $aFtp[$eUser]           = IniRead( $aFile[$eConfig], 'FtpServer', 'User', '' )
        $aFtp[$ePass]           = IniRead( $aFile[$eConfig], 'FtpServer', 'Pass', '' )
 
-Global $aGui[$iEnumVariables]
+Global $aGui[$iMaxEnumIndex]
        $aGui[$eHandle]         = ''
        $aGui[$eWidth]          = @DesktopWidth
        $aGui[$eHeight]         = @DesktopHeight
        $aGui[$eXPosition]      = 0
        $aGui[$eYPosition]      = 0
 
-Global $aTransparency[$iEnumVariables]
+Global $aTransparency[$iMaxEnumIndex]
        $aTransparency[$eMax]   = 255
        $aTransparency[$eMin]   = 25
        $aTransparency[$eStep]  = 15
