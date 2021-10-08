@@ -1,9 +1,9 @@
 Global $iArgumentCount = $CmdLine[0]
 If $iArgumentCount <> 1 Then
-    MsgBox( 16, 'Error', _
+    MsgBox(16, 'Error', _
         'Expected is one argument which is the RC4 crypt key.' & _
         @CRLF & _
-        'Please call the program again with that expected value.', 60 )
+        'Please call the program again with that expected value.', 60)
     Exit -1
 EndIf
 
@@ -11,16 +11,16 @@ Global $aFile[$iMaxEnumIndex]
        $aFile[$eHtml]          = _getUniqueString() & '.html'
        $aFile[$eConfig]        = '..\config\config.ini'
 
-Global $sVidId                 = IniRead( $aFile[$eConfig], 'Youtube', 'VideoId', '' )
-Global $sUrl                   = IniRead( $aFile[$eConfig], 'Video', 'VideoUrl', '' ) & $aFile[$eHtml]
+Global $sVidId                 = IniRead($aFile[$eConfig], 'Youtube', 'VideoId', '')
+Global $sUrl                   = IniRead($aFile[$eConfig], 'Video', 'VideoUrl', '') & $aFile[$eHtml]
 
 Global $aFtp[$iMaxEnumIndex]
        $aFtp[$eFileLocal]      = $aFile[$eHtml]
        $aFtp[$eFileRemote]     = '/www/' & $aFile[$eHtml]
        $aFtp[$eRc4CryptKey]    = $CmdLine[1]
-       $aFtp[$eServer]         = IniRead( $aFile[$eConfig], 'FtpServer', 'Server', '' )
-       $aFtp[$eUser]           = IniRead( $aFile[$eConfig], 'FtpServer', 'User', '' )
-       $aFtp[$ePass]           = IniRead( $aFile[$eConfig], 'FtpServer', 'Pass', '' )
+       $aFtp[$eServer]         = IniRead($aFile[$eConfig], 'FtpServer', 'Server', '')
+       $aFtp[$eUser]           = IniRead($aFile[$eConfig], 'FtpServer', 'User', '')
+       $aFtp[$ePass]           = IniRead($aFile[$eConfig], 'FtpServer', 'Pass', '')
 
 Global $aGui[$iMaxEnumIndex]
        $aGui[$eHandle]         = ''
