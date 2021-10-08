@@ -19,6 +19,8 @@
 
 Au3VidOverlay allows to play Youtube videos as semi transparent fullscreen overlay above each window. So it's possible to do your work and to view your chosen video without switching windows.
 
+**Currently there is a known issue with the data protection page of google which appear before the youtube video page can be loaded. Unfortunately the program can not handle this yet (I will adjust this as soon as I have time to).**
+
 ## Features
 
 To be defined [...]
