@@ -1,9 +1,9 @@
 ; compiler information for AutoIt
 #pragma compile(CompanyName, © SOLVE SMART)
-#pragma compile(FileVersion, 1.3.0)
+#pragma compile(FileVersion, 1.4.0)
 #pragma compile(LegalCopyright, © Sven Seyfert)
 #pragma compile(ProductName, Au3VidOverlay)
-#pragma compile(ProductVersion, 1.3.0 - 2022-02-10)
+#pragma compile(ProductVersion, 1.4.0 - 2022-02-14)
 
 #AutoIt3Wrapper_AU3Check_Stop_OnWarning=y
 #AutoIt3Wrapper_Icon=..\media\favicon.ico
@@ -39,21 +39,21 @@ If $aInst[0][0] > 1 Then Exit
 
 
 ; processing -------------------------------------------------------------------
-_writeFile($aFile[$eHtml], $sHtml)
+_WriteFile($aFile[$eHtml], $sHtml)
 
-Global $iReturnValue = _upload($aFile[$eHtml])
-If $iReturnValue == -1 Then _disposeAndExit()
+Global $iReturnValue = _Upload($aFile[$eHtml])
+If $iReturnValue == -1 Then _DisposeAndExit()
 
 FileDelete($aFile[$eHtml])
 
-Global $sDuration = _getVidDuration($sVidId)
-Global $iDuration = _getVidDurationInSeconds($sDuration)
+Global $sDuration = _GetVidDuration($sVidId)
+Global $iDuration = _GetVidDurationInSeconds($sDuration)
 
-_loadGuiAndPlayVideo()
+_LoadGuiAndPlayVideo()
 
 Global $hTimer = TimerInit()
 While Round(TimerDiff($hTimer) / 1000) < $iDuration + 2
     Sleep(250)
 WEnd
 
-_disposeAndExit()
+_DisposeAndExit()

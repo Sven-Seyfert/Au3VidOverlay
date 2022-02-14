@@ -1,4 +1,4 @@
-Func _getUniqueString()
+Func _GetUniqueString()
     Local $sMachineGuid = RegRead('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography', 'MachineGuid')
     $sMachineGuid = StringReplace($sMachineGuid, '-', '')
     $sMachineGuid = StringTrimLeft($sMachineGuid, 5)
@@ -7,23 +7,23 @@ Func _getUniqueString()
     Return StringLower($sMachineGuid)
 EndFunc
 
-Func _writeFile($sFile, $sText)
+Func _WriteFile($sFile, $sText)
     Local $hFile = FileOpen($sFile, 2 + 8 + 256)
     FileWrite($hFile, $sText)
     FileClose($hFile)
 EndFunc
 
-Func _upload($sFile)
+Func _Upload($sFile)
     Return RunWait('..\utilities\SecureUpload.exe "' & $aFtp[$eRc4CryptKey] & '" "' & $aFtp[$eFileLocal] & '" "' & $aFtp[$eFileRemote] & '" "' & $aFtp[$eServer] & '" "' & $aFtp[$eUser] & '" "' & $aFtp[$ePass] & '"')
 EndFunc
 
-Func _getVidDuration($sId)
+Func _GetVidDuration($sId)
     Local $sUrlContent = BinaryToString(InetRead('https://www.youtube.com/watch?v=' & $sId, 1))
 
     Return StringReplace(StringRegExp($sUrlContent, 'meta itemprop="duration" content="(.+?)"', 1)[0], 'PT', '')
 EndFunc
 
-Func _getVidDurationInSeconds($sTime)
+Func _GetVidDurationInSeconds($sTime)
     Local $iHours = 0, $iMinutes = 0, $iSeconds = 0, $iTotalSeconds = 0
 
     If StringInStr($sTime, 'H') Then
@@ -47,12 +47,12 @@ Func _getVidDurationInSeconds($sTime)
     Return $iTotalSeconds
 EndFunc
 
-Func _setTransparency($iValue)
+Func _SetTransparency($iValue)
     WinSetTrans($aGui[$eHandle], '', $iValue)
-    _setGuiTopMost($iValue)
+    _SetGuiTopMost($iValue)
 EndFunc
 
-Func _setGuiTopMost($iValue)
+Func _SetGuiTopMost($iValue)
     If $iValue == $aTransparency[$eMax] Then
         WinSetOnTop($aGui[$eHandle], '', 0)
     Else
@@ -60,27 +60,27 @@ Func _setGuiTopMost($iValue)
     EndIf
 EndFunc
 
-Func _increaseVisibility()
+Func _IncreaseVisibility()
     $aTransparency[$eValue]    += $aTransparency[$eStep]
 
     If $aTransparency[$eValue] >= $aTransparency[$eMax] Then
         $aTransparency[$eValue] = $aTransparency[$eMax]
     EndIf
 
-    _setTransparency($aTransparency[$eValue])
+    _SetTransparency($aTransparency[$eValue])
 EndFunc
 
-Func _decreaseVisibility()
+Func _DecreaseVisibility()
     $aTransparency[$eValue]    -= $aTransparency[$eStep]
 
     If $aTransparency[$eValue] <= $aTransparency[$eMin] Then
         $aTransparency[$eValue] = $aTransparency[$eMin]
     EndIf
 
-    _setTransparency($aTransparency[$eValue])
+    _SetTransparency($aTransparency[$eValue])
 EndFunc
 
-Func _disposeAndExit()
+Func _DisposeAndExit()
     GUIDelete()
     FileDelete($aFile[$eHtml])
 

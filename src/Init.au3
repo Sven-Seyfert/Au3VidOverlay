@@ -1,3 +1,3 @@
-HotKeySet('!{NUMPAD5}',   '_disposeAndExit')
-HotKeySet('!{NUMPADADD}', '_increaseVisibility')
-HotKeySet('!{NUMPADSUB}', '_decreaseVisibility')
+HotKeySet('!{NUMPAD5}',   '_DisposeAndExit')
+HotKeySet('!{NUMPADADD}', '_IncreaseVisibility')
+HotKeySet('!{NUMPADSUB}', '_DecreaseVisibility')

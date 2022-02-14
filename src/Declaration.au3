@@ -8,7 +8,7 @@ If $iArgumentCount <> 1 Then
 EndIf
 
 Global $aFile[$iMaxEnumIndex]
-       $aFile[$eHtml]          = _getUniqueString() & '.html'
+       $aFile[$eHtml]          = _GetUniqueString() & '.html'
        $aFile[$eConfig]        = '..\config\config.ini'
 
 Global $sVidId                 = IniRead($aFile[$eConfig], 'Youtube', 'VideoId', '')

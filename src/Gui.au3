@@ -1,4 +1,4 @@
-Func _loadGuiAndPlayVideo()
+Func _LoadGuiAndPlayVideo()
     $aGui[$eHandle] = GUICreate('Au3VidOverlay', $aGui[$eWidth], $aGui[$eHeight], $aGui[$eXPosition], $aGui[$eYPosition], $WS_POPUP, $WS_EX_TOPMOST + $WS_EX_TRANSPARENT)
     GUISetBkColor(0xFF000000, $aGui[$eHandle])
 
